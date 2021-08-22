@@ -39,13 +39,13 @@ get_header() ?>
 					<div class="row">
 
 						<?php
-                            $angelsoft_args = array(
-                                'post_type'	=> 'post',
+                            $cloudtechnology_args = array(
+                                'post_type'	=> 'cloudtechnology',
                                 'posts_per_page'	=> 60
                             );
-                            $angelsoft_posts = new WP_Query($angelsoft_args);
-                            while ($angelsoft_posts->have_posts()) {
-                                $angelsoft_posts->the_post(); ?>
+                            $cloudtechnology_posts = new WP_Query($cloudtechnology_args);
+                            while ($cloudtechnology_posts->have_posts()) {
+                                $cloudtechnology_posts->the_post(); ?>
 						<div class="col-4 col-6-medium col-12-small">
 							<section class="box">
 								<a href="<?php the_permalink() ?>" class="image featured">
