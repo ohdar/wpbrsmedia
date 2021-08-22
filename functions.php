@@ -18,6 +18,8 @@ require get_template_directory().'/inc/portfolio.php';
 //Include Custom Post Types
 require get_template_directory() .'/inc/angelsoftware.php';
 //Include Custom Post Types
+require get_template_directory() .'/inc/cloudtechnology.php';
+//Include Custom Post Types
 require get_template_directory() .'/inc/services.php';
 //Include Custom Post Types
 require get_template_directory() .'/inc/elearning.php';
