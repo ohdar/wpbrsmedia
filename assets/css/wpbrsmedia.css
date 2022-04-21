@@ -5,7 +5,9 @@ WPBRSMEDIA THEME CSS
 
 
 @import url("fontawesome-all.min.css");
-@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,900,300italic|Roboto+Condensed");
+/*@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,900,300italic|Roboto+Condensed");*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 /*
 	Dopetrope by HTML5 UP
@@ -140,8 +142,9 @@ input, select, textarea {
 	}
 
 	h1, h2, h3, h4, h5, h6 {
-		color: #252122;
+		color: red;
 		font-weight: 700;
+      	
 	}
 
 	h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
@@ -159,11 +162,17 @@ input, select, textarea {
 
 	a {
 		color: #d52349;
-		text-decoration: underline;
+		text-decoration: none;
+      	line-height: 24px;
+    	font-family: 'Roboto Condensed', sans-serif;
+    	font-size: 16px; 
 	}
 
 		a:hover {
 			text-decoration: none;
+          	color: rgb(30,98,188);
+          	font-weight: 600;
+          	   		
 		}
 
 	br.clear {
@@ -178,7 +187,7 @@ input, select, textarea {
 	}
 
 	p, ul, ol, dl, table {
-	  margin-bottom: 2em;
+	  margin: 1em 0 1em 0;
       color: black;
       font-size: 18px;
       font-family: 'Roboto Condensed';
@@ -418,12 +427,12 @@ input, select, textarea {
 				}
 
 		.row {
-			margin-top: -50px;
-			margin-left: -50px;
+			margin-top: -10px;
+			margin-left: -18px;
 		}
 
 			.row > * {
-				padding: 50px 0 0 50px;
+				padding: 10px 0 0 15px;
 			}
 
 			.row.gtr-uniform {
@@ -661,12 +670,12 @@ input, select, textarea {
 						}
 
 				.row {
-					margin-top: -50px;
-					margin-left: -50px;
+					margin-top: -10px;
+					margin-left: -15px;
 				}
 
 					.row > * {
-						padding: 50px 0 0 50px;
+						padding: 10px 0 0 15px;
 					}
 
 					.row.gtr-uniform {
@@ -1521,6 +1530,7 @@ input, select, textarea {
 
 		table td {
 			padding: 0.5em 1em 0.5em 1em;
+          	font-size:14px;
 		}
 
 		table th {
@@ -1528,6 +1538,13 @@ input, select, textarea {
 			padding: 0.5em 1em 0.5em 1em;
 			font-weight: 700;
 			margin: 0 0 1em 0;
+          	font-size:16px;
+          	background:red;          	
+		}
+		
+		table th strong{
+			color:white;
+          	font-weight:600;
 		}
 
 		table thead {
@@ -1537,7 +1554,7 @@ input, select, textarea {
 /* Section/Article */
 
 	section, article {
-		margin-bottom: 2.5em;
+		margin-bottom: 1em;
 	}
 
 		section > :last-child, section:last-child, article > :last-child, article:last-child {
@@ -1560,7 +1577,7 @@ input, select, textarea {
 			text-align: center;
 			border-top: solid 1px #ccc;
 			top: 1em;
-			margin: 0 0 3em 0;
+			margin: 1em 0 1em 0;
 		}
 
 			header.major h2 {
@@ -1579,9 +1596,9 @@ input, select, textarea {
 /* Box */
 
 	.box {
-		background: #ffffff;
+		background: rgb(255, 255, 255, 0.3);
 		border-bottom: solid 1px #ccc;
-		padding: 2.75em 1.75em 2.75em 1.75em;
+		padding: 2.75em 1.75em 1.75em 1.75em;
 	}
 
 		.box .image.featured {
@@ -1594,7 +1611,7 @@ input, select, textarea {
 
 		.box.post header {
 			padding-top: 1em;
-			margin: 0 0 2em 0;
+			margin: 0 0 1em 0;
 		}
 
 		.box.post h2 {
@@ -1626,10 +1643,14 @@ input, select, textarea {
 		border-radius: 5px;
 		background: #d52349;
 		color: #fff !important;
-		font-weight: 700;
+		font-weight: 400;
 		outline: 0;
 		font-size: 1.1em;
-		padding: 0.65em 1.5em 0.65em 1.5em;
+		padding: 0.2em 0.5em 0.2em 0.5em;
+      	line-height: 24px;
+    	font-family: 'Roboto Condensed', sans-serif;
+    	font-size: 16px;
+    	text-transform: uppercase;
 		text-align: center;
 		-moz-transition: background-color .25s ease-in-out;
 		-webkit-transition: background-color .25s ease-in-out;
@@ -1658,7 +1679,7 @@ input, select, textarea {
 		input[type="reset"].alt,
 		button.alt,
 		.button.alt {
-			background: #252122;
+			background: #1e62bc;
 		}
 
 			input[type="button"].alt:hover,
@@ -1666,7 +1687,7 @@ input, select, textarea {
 			input[type="reset"].alt:hover,
 			button.alt:hover,
 			.button.alt:hover {
-				background: #353132;
+				background: #10407f;
 			}
 
 			input[type="button"].alt:active,
@@ -2091,7 +2112,7 @@ input, select, textarea {
 		position: relative;
 		background: #ffffff;
 		border-bottom: none;
-		padding: 2em 0 0 0;
+		padding: 0.5em 0 0 0;
 		text-align: center;
 	}
 
@@ -2219,10 +2240,10 @@ input, select, textarea {
 	}
 
 		#banner header {
-			background-color: rgba(34, 30, 31, 0.8);
+			background-color: rgba(247, 202, 24, 0.8);
 			display: inline-block;
 			padding: 2.5em 5em;
-			border-radius: 5px;
+			border-radius: 10px;
 		}
 
 			#banner header h2 {
@@ -2251,18 +2272,20 @@ input, select, textarea {
 	}
 
 		#intro section {
-			margin: 3em 0;
-			padding: 2.5em 0;
+			margin: 3em 0 1em 0;
+			padding: 2.5em 0 1em 0;
 		}
 
 		#intro h2 {
 			font-size: 1.2em;
 			text-align: center;
+          	color: red;
 		}
 
 		#intro p {
 			margin: 0;
 			text-align: justify;
+          	padding:20px;
 		}
 
 		#intro .middle {
@@ -2306,8 +2329,8 @@ input, select, textarea {
 
 	#main {
 		position: relative;
-		background: #f7f7f7 url("images/bg02.png");
-		padding: 4em 0 4em 0;
+		background: #f7f7f7 url("images/bg.png");
+		padding: 1em 0 1em 0;
 	}
 
 		#main:before {
@@ -2384,7 +2407,7 @@ input, select, textarea {
 		#copyright ul.links {
 			display: inline-block;
 			background: #2C2929;
-			background: rgba(255, 255, 255, 0.05);
+			background: rgba(255, 240, 0, 0.5);
 			border-radius: 5px;
 			margin: 0;
 			padding: 0.85em 2.25em 0.85em 2.25em;
@@ -2431,14 +2454,14 @@ input, select, textarea {
 		/* Header */
 
 			#header {
-				padding: 4em 0 3em 0;
+				padding: 0.5em 0 4em 0;
 			}
 
 		/* Banner */
 
 			#banner {
 				padding: 6em 0;
-				margin: 3em 0 0 0;
+				margin: 0em 0 0 0;
 			}
 
 		/* Intro */
@@ -2448,7 +2471,7 @@ input, select, textarea {
 			}
 
 				#intro section {
-					padding: 1em 2em;
+					padding: 1em 0em;
 				}
 
 				#intro .middle:before {
@@ -2523,7 +2546,7 @@ input, select, textarea {
 		/* Header */
 
 			#header {
-				padding: 3.5em 0 3em 0;
+				padding: 0.5em 0 4em 0;
 			}
 
 		/* Intro */
@@ -2545,7 +2568,8 @@ input, select, textarea {
 					}
 
 					#intro section p {
-						margin: 0;
+						margin: 0 0 0 15px;
+                      	text-align: center;
 					}
 
 				#intro .middle:before, #intro .middle:after {
@@ -2753,7 +2777,7 @@ input, select, textarea {
 
 			#header {
 				text-align: center;
-				padding: 2em 0;
+				padding: 0.5em 0;
 			}
 
 				#header h1 {
@@ -2797,7 +2821,7 @@ input, select, textarea {
 
 			#banner {
 				padding: 6em 0;
-				margin: 2em 0 0 0;
+				margin: 0.2em 0 0 0;
 			}
 
 				#banner header {
@@ -2829,3 +2853,30 @@ input, select, textarea {
 			}
 
 	}
+
+@media screen and (max-width: 1485px){
+#header {
+    padding: 0.5em 0 5.5em 0;
+}
+}
+
+.wp-block-code code {
+  display: block;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+  background: #c8f7c5;
+  padding: 10px;
+  color:#000000;
+}
+.wp-block-preformatted {
+  white-space: pre-wrap;
+  background: #c8f7c5;
+  color:#000000;
+  padding: 10px;
+}
+.custom-logo{
+  float: left;
+  display: inline;
+  
+}
+

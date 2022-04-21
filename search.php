@@ -26,7 +26,7 @@ get_header() ?>
                                     <footer>
                                         <ul class="actions">
                                             <li><a href="<?php the_permalink() ?>" class="button icon solid fa-file-alt">Continue Reading</a></li>
-                                            <li><a href="<?php comments_link() ?>" class="button alt icon solid fa-comment"><?php echo get_comments_number( ) ?> comments</a></li>
+                                           <!-- <li><a href="<?php comments_link() ?>" class="button alt icon solid fa-comment"><?php echo get_comments_number( ) ?> comments</a></li> -->
                                         </ul>
                                     </footer>
                                 </section>

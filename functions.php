@@ -2,7 +2,7 @@
 /*
 * This is our functions file
 */
-
+//add_filter('site_transient_update_plugins', '__return_false');
 //Include Theme Setup File
 require get_template_directory().'/inc/wpbrsmedia-themesetup.php';
 
@@ -34,3 +34,7 @@ require get_template_directory().'/inc/kirki-config.php';
 
 //Include Customizer
 require get_template_directory() .'/inc/customizer.php';
+//increase the upload size
+//@ini_set( 'upload_max_size' , '64M' );
+//@ini_set( 'post_max_size', '64M');
+//@ini_set( 'max_execution_time', '300' );
