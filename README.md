@@ -1,4 +1,4 @@
-# Welcome to the wpbrsmedia theme!
+# Welcome to the wpbrsmedia WordPress theme!
 
 Thank you for contributing to the project we all love! Your participation is vital to the WordPress theme project.
 
