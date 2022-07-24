@@ -41,6 +41,7 @@ get_header() ?>
 						<?php
                             $angelsoft_args = array(
                                 'post_type'	=> 'angelsoftware',
+                                'orderby' => 'rand',
                                 'posts_per_page'	=> 60
                             );
                             $angelsoft_posts = new WP_Query($angelsoft_args);
