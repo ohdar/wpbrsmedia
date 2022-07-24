@@ -1,9 +1,15 @@
+ 
+
+
+
+
+
+
 <?php
 /*
 * This is used to display about us single pages
-* Template Name: Portfolio Template
+* Template Name: OpenSource Elearning
 */
-
 
 get_header() ?>
 <!-- Main -->
@@ -33,28 +39,27 @@ get_header() ?>
                 <?php wp_reset_postdata() ?>
 
             </div>
-
             <div class="col-12 col-12-medium">
-				<!-- Portfolio -->
+                <!-- Services -->
 				<section>
 					
 					<div class="row">
 
 						<?php
-                            $portfolio_args = array(
-                                'post_type'	=> 'portfolio',
-                                'posts_per_page'	=> 6
+                            $elearning_args = array(
+                                'post_type'	=> 'elearning',
+                                'posts_per_page'	=> 60
                             );
-                            $portfolio_posts = new WP_Query($portfolio_args);
-                            while ($portfolio_posts->have_posts()) {
-                                $portfolio_posts->the_post(); ?>
+                            $elearning_posts = new WP_Query($elearning_args);
+                            while ($elearning_posts->have_posts()) {
+                                $elearning_posts->the_post(); ?>
 						<div class="col-4 col-6-medium col-12-small">
 							<section class="box">
 								<a href="<?php the_permalink() ?>" class="image featured">
-									<?php the_post_thumbnail('portfolio-thumb') ?>
+									<?php the_post_thumbnail('single-post') ?>
 								</a>
 								<header>
-									<a href="<?php the_permalink() ?>"><h3><?php the_title() ?></h3></a>
+									<h3><?php the_title() ?></h3>
 								</header>
 								<?php the_excerpt() ?>
 								<footer>
@@ -80,3 +85,6 @@ get_header() ?>
     </div>
 </section>
 <?php get_footer() ?>
+
+
+            

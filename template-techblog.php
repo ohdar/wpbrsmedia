@@ -41,8 +41,10 @@ get_header() ?>
 						<?php
                             $angelsoft_args = array(
                                 'post_type'	=> 'post',
-                                'posts_per_page'	=> 60
+                                'posts_per_page'	=> 15,
+								'paged' => $paged
                             );
+							$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
                             $angelsoft_posts = new WP_Query($angelsoft_args);
                             while ($angelsoft_posts->have_posts()) {
                                 $angelsoft_posts->the_post(); ?>
@@ -52,7 +54,7 @@ get_header() ?>
 									<?php the_post_thumbnail('single-post') ?>
 								</a>
 								<header>
-									<h3><?php the_title() ?></h3>
+									<a href="<?php the_permalink() ?>"><h3><?php the_title() ?></h3></a>
 								</header>
 								<?php the_excerpt() ?>
 								<footer>
@@ -64,6 +66,30 @@ get_header() ?>
 						</div>
 						<?php
                             } ?>
+</div>
+				</section>
+<!-- Pagination -->
+				<section>
+					
+					<div class="row">
+<div style="margin: auto;  width: 20%;  border: 0px solid green;  padding: 10px;">
+                      <?php
+                      $total_pages = $angelsoft_posts->max_num_pages;
+
+                          if ($total_pages > 1){
+
+                              $current_page = max(1, get_query_var('paged'));
+
+                              echo paginate_links(array(
+                                  'base' => get_pagenum_link(1) . '%_%',
+                                  'format' => '/page/%#%',
+                                  'current' => $current_page,
+                                  'total' => $total_pages,
+                                  'prev_text'    => __('« prev'),
+                                  'next_text'    => __('next »'),
+                              ));
+                          }
+                      ?>
 						<?php wp_reset_postdata() ?>
 						
 					</div>

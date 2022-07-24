@@ -52,7 +52,7 @@ get_header() ?>
 									<?php the_post_thumbnail('services-thumb') ?>
 								</a>
 								<header>
-									<h3><?php the_title() ?></h3>
+									<a href="<?php the_permalink() ?>"><h3><?php the_title() ?></h3></a>
 								</header>
 								<?php the_excerpt() ?>
 								<footer>

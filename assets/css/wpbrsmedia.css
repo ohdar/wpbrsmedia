@@ -1529,8 +1529,13 @@ input, select, textarea {
 			}
 
 		table td {
-			padding: 0.5em 1em 0.5em 1em;
-          	font-size:14px;
+			/*dding: 0.5em 1em 0.5em 1em;
+          	font-size:14px; */
+          	padding: 0.5em;
+			font-size: 14px;
+			color: black;
+			font-size: 18px;
+			font-family: 'Roboto Condensed';
 		}
 
 		table th {

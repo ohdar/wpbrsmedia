@@ -39,40 +39,63 @@ get_header() ?>
 					<div class="row">
 
 						<?php
+
                             $cloudtechnology_args = array(
                                 'post_type'	=> 'cloudtechnology',
-                                'posts_per_page'	=> 60
+                                'posts_per_page'	=> 15 ,
+								'paged' => $paged
                             );
+							$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
                             $cloudtechnology_posts = new WP_Query($cloudtechnology_args);
                             while ($cloudtechnology_posts->have_posts()) {
                                 $cloudtechnology_posts->the_post(); ?>
-						<div class="col-4 col-6-medium col-12-small">
-							<section class="box">
-								<a href="<?php the_permalink() ?>" class="image featured">
-									<?php the_post_thumbnail('single-post') ?>
-								</a>
-								<header>
-									<h3><?php the_title() ?></h3>
-								</header>
-								<?php the_excerpt() ?>
-								<footer>
-									<ul class="actions">
-										<li><a href="<?php the_permalink() ?>" class="button alt">Find out more</a></li>
-									</ul>
-								</footer>
-							</section>
-						</div>
+								<div class="col-4 col-6-medium col-12-small">
+									<section class="box">
+										<a href="<?php the_permalink() ?>" class="image featured">
+											<?php the_post_thumbnail('single-post') ?>
+										</a>
+										<header>
+											<a href="<?php the_permalink() ?>"><h3><?php the_title() ?></h3></a>
+										</header>
+											<?php the_excerpt() ?>
+										<footer>
+											<ul class="actions">
+												<li><a href="<?php the_permalink() ?>" class="button alt">Find out more</a></li>
+												</ul>
+											</footer>
+									</section>
+								</div>
 						<?php
                             } ?>
-						<?php wp_reset_postdata() ?>
-						
+				</div>
+				</section>
+<!-- Pagination -->
+				<section>
+					
+					<div class="row">
+<div style="margin: auto;  width: 20%;  border: 0px solid green;  padding: 10px;">
+                      <?php
+                      $total_pages = $cloudtechnology_posts->max_num_pages;
+
+                          if ($total_pages > 1){
+
+                              $current_page = max(1, get_query_var('paged'));
+
+                              echo paginate_links(array(
+                                  'base' => get_pagenum_link(1) . '%_%',
+                                  'format' => '/page/%#%',
+                                  'current' => $current_page,
+                                  'total' => $total_pages,
+                                  'prev_text'    => __('« prev'),
+                                  'next_text'    => __('next »'),
+                              ));
+                          }
+                      ?>
+					<?php wp_reset_postdata() ?>
+</div>						
 					</div>
 				</section>
-
-                
-                
-
-            </div>
+         </div>
             
         </div>
     </div>

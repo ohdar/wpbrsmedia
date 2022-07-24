@@ -1,16 +1,16 @@
 <?php
 /*
-* This is used to display about us single pages
-* Template Name: Portfolio Template
+* This is our first theme single.php
+* Primary Sidebar Left
 */
-
 
 get_header() ?>
 <!-- Main -->
 <section id="main">
     <div class="container">
         <div class="row">
-		<div class="col-12 col-12-medium">
+        
+            <div class="col-8 col-12-medium">
                 <?php
                     if(have_posts()) {
                         while(have_posts()) {
@@ -30,28 +30,26 @@ get_header() ?>
                     <?php }
                     }
                 ?>
-                <?php wp_reset_postdata() ?>
-
-            </div>
-
             <div class="col-12 col-12-medium">
-				<!-- Portfolio -->
+                <!-- Services -->
 				<section>
-					
+					<header class="major">
+						<h2>Other Angel Softwares</h2>
+					</header>
 					<div class="row">
 
 						<?php
-                            $portfolio_args = array(
-                                'post_type'	=> 'portfolio',
+                            $angelsoft_args = array(
+                                'post_type'	=> 'angelsoftware',
                                 'posts_per_page'	=> 6
                             );
-                            $portfolio_posts = new WP_Query($portfolio_args);
-                            while ($portfolio_posts->have_posts()) {
-                                $portfolio_posts->the_post(); ?>
+                            $angelsoft_posts = new WP_Query($angelsoft_args);
+                            while ($angelsoft_posts->have_posts()) {
+                                $angelsoft_posts->the_post(); ?>
 						<div class="col-4 col-6-medium col-12-small">
 							<section class="box">
 								<a href="<?php the_permalink() ?>" class="image featured">
-									<?php the_post_thumbnail('portfolio-thumb') ?>
+									<?php the_post_thumbnail('angelsoft-thumb') ?>
 								</a>
 								<header>
 									<a href="<?php the_permalink() ?>"><h3><?php the_title() ?></h3></a>
@@ -74,9 +72,12 @@ get_header() ?>
                 
                 
 
+            </div>    
+
             </div>
-            
+            <?php get_sidebar() ?>
         </div>
     </div>
 </section>
+
 <?php get_footer() ?>
