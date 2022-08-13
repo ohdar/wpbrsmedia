@@ -1607,7 +1607,7 @@ input, select, textarea {
 /* Box */
 
 	.box {
-		background: rgb(255, 255, 255, 0.3);
+		background: rgb(255, 255, 255, 0.8);
 		border: solid 1px #ccc;
 		padding: 2.75em 1.75em 1.75em 1.75em;
       	border-bottom-left-radius: 10px;
