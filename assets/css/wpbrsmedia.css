@@ -116,7 +116,7 @@ input, select, textarea {
 
 	strong, b {
 		color: #252122;
-		font-weight: 400;
+		font-weight: 600;
 	}
 
 	i, em {
@@ -158,6 +158,10 @@ input, select, textarea {
 
 	h3 {
 		font-size: 1.35em;
+      	padding-bottom: 0.5em;
+      	font-family: 'Roboto Condensed', sans-serif;
+    	font-size: 16px;
+    	text-transform: uppercase;
 	}
 
 	a {
@@ -1544,7 +1548,9 @@ input, select, textarea {
 			font-weight: 700;
 			margin: 0 0 1em 0;
           	font-size:16px;
-          	background:red;          	
+          	background:red;  
+          	color: white;
+          	font-size: inherit;
 		}
 		
 		table th strong{
@@ -1602,8 +1608,10 @@ input, select, textarea {
 
 	.box {
 		background: rgb(255, 255, 255, 0.3);
-		border-bottom: solid 1px #ccc;
+		border: solid 1px #ccc;
 		padding: 2.75em 1.75em 1.75em 1.75em;
+      	border-bottom-left-radius: 10px;
+    	border-bottom-right-radius: 10px;
 	}
 
 		.box .image.featured {
@@ -1612,11 +1620,13 @@ input, select, textarea {
 			left: 1.75em;
 			top: 1.75em;
 			margin: -4.5em 0 4.25em -3.5em;
+          	
 		}
 
 		.box.post header {
 			padding-top: 1em;
 			margin: 0 0 1em 0;
+          
 		}
 
 		.box.post h2 {
@@ -1627,11 +1637,26 @@ input, select, textarea {
 		.box.post header > p {
 			margin-top: 1.25em;
 			font-size: 1.25em;
+          text-align: justify;
+		}
+
+		.box.post p {			
+          text-align: justify;
+		}
+		
+		.box.post ul {			
+          margin: 0px 0px 20px 20px;
 		}
 
 		.box footer ul.actions {
 			margin-bottom: 0;
 		}
+
+        .boxpaging {
+            background: rgb(255, 255, 255, 0.3);
+            border: solid 1px #ccc;
+            padding: 0.75em 0.05em 0.05em 0.05em
+        }
 
 /* Button */
 
@@ -1771,7 +1796,7 @@ input, select, textarea {
 
 	ol {
 		list-style: decimal;
-		padding-left: 1.25em;
+		padding-left: 2.25em;
 	}
 
 		ol li {
@@ -2869,15 +2894,20 @@ input, select, textarea {
   display: block;
   white-space: pre-wrap;
   overflow-wrap: break-word;
-  background: #c8f7c5;
+  background: #252935;
   padding: 10px;
-  color:#000000;
+  color:#ffffff;
+  font-size: large;
+  overflow: auto;
+  margin-bottom: 30px;
 }
 .wp-block-preformatted {
   white-space: pre-wrap;
-  background: #c8f7c5;
-  color:#000000;
+  background: #260b06;
   padding: 10px;
+  color: white;
+  overflow: auto;
+  margin-bottom: 30px;
 }
 .custom-logo{
   float: left;
@@ -2885,3 +2915,116 @@ input, select, textarea {
   
 }
 
+.x-label {
+  padding: .25rem .5rem;
+  line-height: 1.5;
+  border-radius: .3rem;
+  border: 1px solid transparent;
+  margin: 5px;
+  word-break: keep-all !important;
+  display: inline-block;
+}
+
+.x-label-0 {
+  padding: 0.5rem 1.0rem 0.5rem 1.0rem;
+  color: #fff !important;
+  border-top-color: #3395ff !important;
+  border-bottom-color: #0062cc !important;
+  background-color: #007bff !important;
+}
+
+@media screen and (max-width: 1485px) {
+.x-label {
+  padding: .25rem .5rem;
+  line-height: 1.5;
+  border-radius: .3rem;
+  border: 1px solid transparent;
+  margin: 5px;
+  word-break: keep-all !important;
+  display: inline-block;
+}
+
+.x-label-0 {
+  padding: 0.5rem 1.0rem 0.5rem 1.0rem;
+  color: #fff !important;
+  border-top-color: #3395ff !important;
+  border-bottom-color: #0062cc !important;
+  background-color: #007bff !important;
+}
+}
+@media screen and (max-width: 736px) {
+.x-label {
+  padding: .25rem .5rem;
+  line-height: 1.5;
+  border-radius: .3rem;
+  border: 1px solid transparent;
+  margin: 5px;
+  word-break: keep-all !important;
+  display: inline-block;
+}
+
+.x-label-0 {
+  padding: 0.5rem 1.0rem 0.5rem 1.0rem;
+  color: #fff !important;
+  border-top-color: #3395ff !important;
+  border-bottom-color: #0062cc !important;
+  background-color: #007bff !important;
+}
+}
+@media screen and (max-width: 980px) {
+.x-label {
+  padding: .25rem .5rem;
+  line-height: 1.5;
+  border-radius: .3rem;
+  border: 1px solid transparent;
+  margin: 5px;
+  word-break: keep-all !important;
+  display: inline-block;
+}
+
+.x-label-0 {
+  padding: 0.5rem 1.0rem 0.5rem 1.0rem;
+  color: #fff !important;
+  border-top-color: #3395ff !important;
+  border-bottom-color: #0062cc !important;
+  background-color: #007bff !important;
+}
+}
+@media screen and (max-width: 1280px) {
+.x-label {
+  padding: .25rem .5rem;
+  line-height: 1.5;
+  border-radius: .3rem;
+  border: 1px solid transparent;
+  margin: 5px;
+  word-break: keep-all !important;
+  display: inline-block;
+}
+
+.x-label-0 {
+  padding: 0.5rem 1.0rem 0.5rem 1.0rem;
+  color: #fff !important;
+  border-top-color: #3395ff !important;
+  border-bottom-color: #0062cc !important;
+  background-color: #007bff !important;
+}
+}
+@media screen and (max-width: 1680px) {
+.x-label {
+  padding: .25rem .5rem;
+  line-height: 1.5;
+  border-radius: .3rem;
+  border: 1px solid transparent;
+  margin: 5px;
+  word-break: keep-all !important;
+  display: inline-block;
+}
+
+.x-label-0 {
+  padding: 0.5rem 1.0rem 0.5rem 1.0rem;
+  color: #fff !important;
+  border-top-color: #3395ff !important;
+  border-bottom-color: #0062cc !important;
+  background-color: #007bff !important;
+}
+}

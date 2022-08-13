@@ -38,3 +38,23 @@ require get_template_directory() .'/inc/customizer.php';
 //@ini_set( 'upload_max_size' , '64M' );
 //@ini_set( 'post_max_size', '64M');
 //@ini_set( 'max_execution_time', '300' );
+
+function wpdocs_custom_excerpt_length( $length ) {
+    return 20;
+}
+add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
+
+function tags_after_single_post_content($content) {
+  $posttags = get_the_tags();
+  if ($posttags) {
+    $array = [];
+    foreach($posttags as $tag) {
+      $array[] = '<li class="x-label x-label-0">' . $tag->name . '</li>';
+    }
+    $content .= '<h3>Key Terms:</h3><ul class="">' . implode(', ' , $array ) . '</ul>';
+  }
+
+  return $content;
+}
+add_filter( 'the_content', 'tags_after_single_post_content' );
+

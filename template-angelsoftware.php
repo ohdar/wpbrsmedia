@@ -38,6 +38,7 @@ get_header() ?>
 					
 					<div class="row">
 
+
 						<?php
                             $angelsoft_args = array(
                                 'post_type'	=> 'angelsoftware',
@@ -47,7 +48,7 @@ get_header() ?>
                             $angelsoft_posts = new WP_Query($angelsoft_args);
                             while ($angelsoft_posts->have_posts()) {
                                 $angelsoft_posts->the_post(); ?>
-						<div class="col-4 col-6-medium col-12-small">
+						<div class="col-3 col-6-medium col-12-small">
 							<section class="box">
 								<a href="<?php the_permalink() ?>" class="image featured">
 									<?php the_post_thumbnail('angelsoft-thumb') ?>
@@ -58,7 +59,7 @@ get_header() ?>
 								<?php the_excerpt() ?>
 								<footer>
 									<ul class="actions">
-										<li><a href="<?php the_permalink() ?>" class="button alt">Find out more</a></li>
+										<li><a href="<?php the_permalink() ?>" class="button alt">More</a></li>
 									</ul>
 								</footer>
 							</section>

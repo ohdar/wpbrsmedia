@@ -10,7 +10,7 @@ get_header() ?>
     <div class="container">
         <div class="row">
         
-            <div class="col-8 col-12-medium">
+            <div class="col-9 col-12-medium">
                 <?php
                     if(have_posts()) {
                         while(have_posts()) {
@@ -58,7 +58,7 @@ get_header() ?>
 								<?php the_excerpt() ?>
 								<footer>
 									<ul class="actions">
-										<li><a href="<?php the_permalink() ?>" class="button alt">Find out more</a></li>
+										<li><a href="<?php the_permalink() ?>" class="button alt">More</a></li>
 									</ul>
 								</footer>
 							</section>

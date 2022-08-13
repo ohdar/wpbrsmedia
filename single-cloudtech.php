@@ -10,7 +10,7 @@ get_header() ?>
     <div class="container">
         <div class="row">
         
-            <div class="col-8 col-12-medium">
+            <div class="col-9 col-12-medium">
                 <?php
                     if(have_posts()) {
                         while(have_posts()) {

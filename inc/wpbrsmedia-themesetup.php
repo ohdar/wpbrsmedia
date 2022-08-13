@@ -17,6 +17,9 @@ function wpbrsmedia_theme_setup()
     
     add_theme_support('automatic-feed-links');
     add_theme_support('woocommerce');
+  	
+  	add_theme_support( 'responsive-embeds' ); /* Youtube Embed Size full Width */
+	add_theme_support( 'custom-spacing' );
 
     register_nav_menus(array(
         'primary'   => __('Primary Menu', 'wpbrsmedia')

@@ -12,11 +12,12 @@
 		<header>
 			<h2><?php echo get_theme_mod('home_banner_heading_text', 'Howdy. This is Dopetrope.') ?></h2>
 			<p><?php echo get_theme_mod('home_banner_paragraph_text', 'A responsive template by HTML5 UP.') ?></p>
-		</header>
+
+		</header>				
 	</section>
 <?php endif;?>
 
-<!-- Intro -->
+<!-- Intro 
 <?php if (true == get_theme_mod('toggle_home_intro', true)) : ?>
 <div id="homeintro" class="row home-intro">
 	<section id="intro" class="container">
@@ -65,15 +66,15 @@
 </div>
 <?php endif; ?>
 
-
+-->
 
 <!-- Main -->
 	<section id="main">
 		<div class="container">
-			<div class="row">
+		<div class="row">
 				<div class="col-12">			
 
-				<!-- Services -->
+				<!-- Services 
 				<section>
 					<header class="major">
 						<h2>Our Services</h2>
@@ -110,11 +111,11 @@
 						<?php wp_reset_postdata() ?>
 						
 					</div>
-				</section>
+				</section> -->
 
 			</div>
 			<div class="col-12">
-				<!-- Portfolio -->
+				<!-- Portfolio 
 				<section>
 					<header class="major">
 						<h2>Portfolio</h2>
@@ -150,21 +151,21 @@
 						<?php wp_reset_postdata() ?>
 						
 					</div>
-				</section>
+				</section> -->
 
 			</div>
 			<div class="col-12 ">
 
 				<!-- Blog -->
 				<section>
-					<header class="major">
+				<!--	<header class="major">
 						<h2>Tech Blog</h2>
-					</header>
+					</header> -->
 					<div class="row">
 						<?php
                             $blog_args = array(
                                 'post_type'	=> 'post',
-                                'posts_per_page'	=> 4
+								'posts_per_page'	=> 16
                             );
                             $blog_posts = new WP_Query($blog_args);
                             while ($blog_posts->have_posts()) {
@@ -176,12 +177,12 @@
 								</a>
 								<header>
 									<h3><?php the_title() ?></h3>
-									<p>Posted on <?php the_date() ?> at <?php the_time() ?></p>
+									
 								</header>
 								<?php the_excerpt() ?>
 								<footer>
 									<ul class="actions">
-										<li><a href="<?php the_permalink() ?>" class="button icon solid fa-file-alt">Continue Reading</a></li>
+										<li><a href="<?php the_permalink() ?>" class="button icon solid fa-file-alt">Continue</a></li>
 										
 									</ul>
 								</footer>
@@ -192,10 +193,22 @@
 						
 					</div>
 				</section>
-
+                  <?php
+						echo '<div class="col-12">';
+						echo '<section><header class="major"><h2>You Can Find Articles Here On:</h2> </header>';
+						echo '<div class="box col-12" style="padding:0px; margin:0px">';						
+                        $categories = get_categories();
+                        echo '<ul class="">';
+                        foreach( $categories as $category) { 
+                           // echo $category->cat_name . ' ';
+                            echo '<li class="x-label x-label-0">' . $category->cat_name . '</li>';
+                        } 
+						echo '</ul></div></section></div>';
+                  ?>
 			</div>
 		</div>
 	</div>
+
 </section>
 
 <?php get_footer(); ?>

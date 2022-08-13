@@ -8,7 +8,7 @@ get_header() ?>
 <section id="main">
     <div class="container">
         <div class="row">
-            <div class="col-8 col-12-medium">
+            <div class="col-9 col-12-medium">
                 <?php
                     if(have_posts()) {
                         while(have_posts()) {
@@ -23,12 +23,14 @@ get_header() ?>
                                 </header>
 
                                 <?php the_content() ?>
-
+								
+                          		
                             </article>
                     <?php }
                     }
                 ?>
-                
+
+
 <div class="col-12 ">
 
 				<!-- Blog -->
@@ -52,13 +54,12 @@ get_header() ?>
 									<?php the_post_thumbnail('home-featured') ?>
 								</a>
 								<header>
-									<a href="<?php the_permalink() ?>"><h3><?php the_title() ?></h3></a>
-									<p>Posted on <?php the_date() ?> at <?php the_time() ?></p>
+									<a href="<?php the_permalink() ?>"><h3><?php the_title() ?></h3></a>									
 								</header>
 								<?php the_excerpt() ?>
 								<footer>
 									<ul class="actions">
-										<li><a href="<?php the_permalink() ?>" class="button icon solid fa-file-alt">Continue Reading</a></li>
+										<li><a href="<?php the_permalink() ?>" class="button icon solid fa-file-alt">More</a></li>
 										
 									</ul>
 								</footer>
@@ -67,28 +68,33 @@ get_header() ?>
 						<?php
                             } ?>
 
+
+
 <?php
         //Create WordPress Query with 'orderby' set to 'rand' (Random)
         $the_query = new WP_Query( array ( 'orderby' => 'rand', 'posts_per_page' => '10' ) );
         // output the random post
-        echo '<header class="major"><h2>Other Articles</h2> </header>';
-         echo '<ul class="actions">';
+       		
+		echo '<div class="col-12">';
+		echo '<section><header class="major"><h2>Other Articles</h2> </header>';
+		echo '<div class="box col-12">';
+		echo '<ol class="">';
         while ( $the_query->have_posts() ) : $the_query->the_post();
-            echo ' --<li> ';
+            echo '<li>';
             echo '<a href=';
             the_permalink();
             echo '>';
             the_title();
             echo '</a>';
-            echo '</li>';
-            echo ',';
-            echo '</br>';
+            echo '</li>'; 
         endwhile;
-        echo '</ul>';
+        echo '</ol></div></section></div>';
         // Reset Post Data
         wp_reset_postdata();
 
  ?>
+
+
 
 						
 					</div>

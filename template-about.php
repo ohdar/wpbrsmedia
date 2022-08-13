@@ -9,7 +9,7 @@ get_header() ?>
 <section id="main">
     <div class="container">
         <div class="row">
-            <div class="col-12 col-12-medium">
+            <div class="col-9 col-12-medium">
                 <?php
                     if(have_posts()) {
                         while(have_posts()) {
@@ -32,7 +32,7 @@ get_header() ?>
                 
 
             </div>
-            <?php //get_sidebar() ?>
+            <?php get_sidebar() ?>
         </div>
     </div>
 </section>

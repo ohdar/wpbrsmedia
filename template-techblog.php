@@ -41,14 +41,14 @@ get_header() ?>
 						<?php
                             $angelsoft_args = array(
                                 'post_type'	=> 'post',
-                                'posts_per_page'	=> 15,
+                                'posts_per_page'	=> 20,
 								'paged' => $paged
                             );
 							$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
                             $angelsoft_posts = new WP_Query($angelsoft_args);
                             while ($angelsoft_posts->have_posts()) {
                                 $angelsoft_posts->the_post(); ?>
-						<div class="col-4 col-6-medium col-12-small">
+						<div class="col-3 col-6-medium col-12-small">
 							<section class="box">
 								<a href="<?php the_permalink() ?>" class="image featured">
 									<?php the_post_thumbnail('single-post') ?>
@@ -59,7 +59,7 @@ get_header() ?>
 								<?php the_excerpt() ?>
 								<footer>
 									<ul class="actions">
-										<li><a href="<?php the_permalink() ?>" class="button alt">Find out more</a></li>
+										<li><a href="<?php the_permalink() ?>" class="button alt">More</a></li>
 									</ul>
 								</footer>
 							</section>
@@ -71,8 +71,8 @@ get_header() ?>
 <!-- Pagination -->
 				<section>
 					
-					<div class="row">
-<div style="margin: auto;  width: 20%;  border: 0px solid green;  padding: 10px;">
+					<div class="boxpaging"><h3>
+					<div style="margin: auto;  width: 20%;  border: 0px solid green;  padding: 10px;">
                       <?php
                       $total_pages = $angelsoft_posts->max_num_pages;
 
@@ -91,10 +91,10 @@ get_header() ?>
                           }
                       ?>
 						<?php wp_reset_postdata() ?>
-						
-					</div>
+					</div>						
+					</h3></div>
 				</section>
-
+<!-- Pagination -->
                 
                 
 
