@@ -77,7 +77,7 @@ get_header() ?>
        		
 		echo '<div class="col-12">';
 		echo '<section><header class="major"><h2>Other Articles</h2> </header>';
-		echo '<div class="box col-12">';
+		echo '<div class="box col-12" style="margin: 0px; padding: 0px;">';
 		echo '<ol class="">';
         while ( $the_query->have_posts() ) : $the_query->the_post();
             echo '<li>';
