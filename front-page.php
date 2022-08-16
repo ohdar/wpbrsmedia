@@ -96,7 +96,7 @@
 									<?php the_post_thumbnail('services-thumb') ?>
 								</a>
 								<header>
-									<h3><?php the_title() ?></h3>
+									<a href="<?php the_permalink() ?>"><h3><?php the_title() ?></h3></a>
 								</header>
 								<?php the_excerpt() ?>
 								<footer>
@@ -136,7 +136,7 @@
 									<?php the_post_thumbnail('portfolio-thumb') ?>
 								</a>
 								<header>
-									<h3><?php the_title() ?></h3>
+									<a href="<?php the_permalink() ?>"><h3><?php the_title() ?></h3></a>
 								</header>
 								<?php the_excerpt() ?>
 								<footer>
@@ -176,8 +176,7 @@
 									<?php the_post_thumbnail('home-featured') ?>
 								</a>
 								<header>
-									<h3><?php the_title() ?></h3>
-									
+									<a href="<?php the_permalink() ?>"><h3><?php the_title() ?></h3></a>									
 								</header>
 								<?php the_excerpt() ?>
 								<footer>
