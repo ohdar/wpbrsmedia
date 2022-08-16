@@ -17,7 +17,7 @@
 	</section>
 <?php endif;?>
 
-<!-- Intro 
+<!-- Intro -->
 <?php if (true == get_theme_mod('toggle_home_intro', true)) : ?>
 <div id="homeintro" class="row home-intro">
 	<section id="intro" class="container">
@@ -66,7 +66,7 @@
 </div>
 <?php endif; ?>
 
--->
+<!-- Intro -->
 
 <!-- Main -->
 	<section id="main">
@@ -74,7 +74,7 @@
 		<div class="row">
 				<div class="col-12">			
 
-				<!-- Services 
+				<!--Services 
 				<section>
 					<header class="major">
 						<h2>Our Services</h2>
@@ -182,7 +182,7 @@
 								<?php the_excerpt() ?>
 								<footer>
 									<ul class="actions">
-										<li><a href="<?php the_permalink() ?>" class="button icon solid fa-file-alt">Continue</a></li>
+										<li><a href="<?php the_permalink() ?>" class="button icon solid fa-file-alt">More</a></li>
 										
 									</ul>
 								</footer>

@@ -39,11 +39,13 @@ require get_template_directory() .'/inc/customizer.php';
 //@ini_set( 'post_max_size', '64M');
 //@ini_set( 'max_execution_time', '300' );
 
+// Excerpt Limit 20 words
 function wpdocs_custom_excerpt_length( $length ) {
     return 20;
 }
 add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
 
+// Show Tags below content
 function tags_after_single_post_content($content) {
   $posttags = get_the_tags();
   if ($posttags) {

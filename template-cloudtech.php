@@ -42,7 +42,7 @@ get_header() ?>
 
                             $cloudtechnology_args = array(
                                 'post_type'	=> 'cloudtechnology',
-                                'posts_per_page'	=> 15 ,
+                                'posts_per_page'	=> 20 ,
 								'paged' => $paged
                             );
 							$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
@@ -95,7 +95,8 @@ get_header() ?>
 </div>						
 					</h3></div>
 				</section>
-         </div>
+<!-- Pagination -->             
+			</div>
             
         </div>
     </div>

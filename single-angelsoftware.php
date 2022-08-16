@@ -34,7 +34,7 @@ get_header() ?>
                 <!-- Services -->
 				<section>
 					<header class="major">
-						<h2>Other Angel Softwares</h2>
+						<h2>More Angel Softwares</h2>
 					</header>
 					<div class="row">
 

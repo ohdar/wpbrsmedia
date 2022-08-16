@@ -142,7 +142,7 @@ input, select, textarea {
 	}
 
 	h1, h2, h3, h4, h5, h6 {
-		color: red;
+		color: #0c62a5;
 		font-weight: 700;
       	
 	}
@@ -166,6 +166,37 @@ input, select, textarea {
 		font-size: 1.1em;
       	font-family: 'Roboto Condensed', sans-serif;    	
 	}
+	
+	h3.widget-title{      
+      font-family: Roboto;
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 1.5;
+      text-align: left;
+      text-transform: none;
+      color: #0c62a5;
+      position: relative;
+      padding-bottom: 19px;
+      margin-bottom: 19px;
+      }
+	h3.widget-title:before{      
+      content: '';
+      border-top: 1px solid #042231;
+      width: 170px;
+      height: 1px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+	}
+	h3.widget-title:after{      
+        background: #0c80a5;
+        content: '';
+        height: 4px;
+        width: 50px;
+        position: absolute;
+        bottom: 1px;
+        left: 0;
+	}
 
 	a {
 		color: #d52349;
@@ -178,7 +209,7 @@ input, select, textarea {
 		a:hover {
 			text-decoration: none;
           	color: rgb(30,98,188);
-          	font-weight: 600;
+          	font-weight: 400;
           	   		
 		}
 
@@ -1629,12 +1660,35 @@ input, select, textarea {
 		.box.post header {
 			padding-top: 1em;
 			margin: 0 0 1em 0;
+          	position: relative;
+            padding-bottom: 19px;
+            margin-bottom: 49px;
           
+		}
+		.box.post header:before {
+			content: '';
+            border-top: 1px solid #042231;
+            width: 270px;
+            height: 1px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+		}
+		.box.post header:after {
+			background: #0c80a5;
+            content: '';
+            height: 4px;
+            width: 50px;
+            position: absolute;
+            bottom: 1px;
+            left: 0;
 		}
 
 		.box.post h2 {
-			font-size: 2.5em;
-			letter-spacing: -0.015em;
+			font-size: 2.0em;
+    		font-weight: 400;
+    		letter-spacing: -0.015em;
+          	color: #0c62a5;
 		}
 
 		.box.post header > p {
@@ -2381,6 +2435,7 @@ input, select, textarea {
 		#main .major h2 {
 			background: #f7f7f7 url("images/bg02.png");
 			font-size: 1.5em;
+          	border-radius: 5px;
 		}
 
 /* Footer */
