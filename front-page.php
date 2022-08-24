@@ -165,7 +165,7 @@
 						<?php
                             $blog_args = array(
                                 'post_type'	=> 'post',
-								'posts_per_page'	=> 16
+								'posts_per_page'	=> 24
                             );
                             $blog_posts = new WP_Query($blog_args);
                             while ($blog_posts->have_posts()) {
@@ -176,7 +176,7 @@
 									<?php the_post_thumbnail('home-featured') ?>
 								</a>
 								<header>
-									<a href="<?php the_permalink() ?>"><h3><?php the_title() ?></h3></a>									
+                              		<a href="<?php the_permalink() ?>"><h3><?php the_title() ?></h3></a>	
 								</header>
 								<?php the_excerpt() ?>
 								<footer>

@@ -43,12 +43,12 @@ get_header() ?>
                             $blog_args = array(
                                 'post_type'	=> 'post',
 								'orderby' => 'rand',
-                                'posts_per_page'	=> 3,	
+                                'posts_per_page'	=> 4,	
                             );
                             $blog_posts = new WP_Query($blog_args);
                             while ($blog_posts->have_posts()) {
                                 $blog_posts->the_post(); ?>
-						<div class="col-4 col-12-small">
+						<div class="col-3 col-12-small">
 							<section class="box">
 								<a href="<?php the_permalink() ?>" class="image featured">
 									<?php the_post_thumbnail('home-featured') ?>

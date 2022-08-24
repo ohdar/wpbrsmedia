@@ -53,7 +53,7 @@ function tags_after_single_post_content($content) {
     foreach($posttags as $tag) {
       $array[] = '<li class="x-label x-label-0">' . $tag->name . '</li>';
     }
-    $content .= '<h3>Key Terms:</h3><ul class="" style="margin:0px; padding:0px">' . implode(', ' , $array ) . '</ul>';
+    $content .= '<h2>Key Terms:</h2><ul class="" style="margin:0px; padding:0px">' . implode(', ' , $array ) . '</ul>';
   }
 
   return $content;
